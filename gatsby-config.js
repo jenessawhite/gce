@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Starter Landing Page`,
-    description: `A barebone landing page starter with some minimal styles.`,
-    author: `@gillkyle`,
-    siteUrl: `https://gatsby-starter-landing-page.netlify.com`,
+    title: `The Gospel Comedy Explosion`,
+    description: `The Gospel Comedy Explosion is a touring roster of talented comedians spreading joyous noise in the form of laughter around the country.`,
+    author: `Paschal Hildreth Entertainment`,
+    siteUrl: `http://gospelcomedyexplosion.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
