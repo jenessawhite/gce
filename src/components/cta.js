@@ -4,12 +4,12 @@ import Button from "../components/button"
 import SectionHeader from "./section-header"
 
 const CallToAction = () => (
-  <div style={{ padding: "4rem 1rem", textAlign: "center" }}>
+  <div class="cta" style={{ paddingBottom: "4rem", textAlign: "center" }}>
     <SectionHeader
       title="Stay Updated"
-      description="Give a final call to action because that's what the cool kids are doing."
+      description="Follow us on Facebook to find our latest show"
     />
-    <Button>Get Early Access</Button>
+    <Button>See Upcoming Events</Button>
   </div>
 )
 

@@ -23,7 +23,7 @@ const Footer = ({ siteTitle }) => (
       <div style={{ color: COLORS.blue, fontWeight: 700 }}>
         <a
           style={{ textDecoration: "none" }}
-          href="https://github.com/gillkyle/gatsby-starter-landing-page"
+          href="tel:+901-896-8419"
         >
           Contact Us
         </a>

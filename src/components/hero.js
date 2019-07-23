@@ -1,12 +1,27 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Button from "../components/button"
-import headerImage from "../images/header.png"
+import headerImage from "../images/donnie-rosie-taO2fC7sxDU-unsplash.jpg"
 import MockupContent from "./image"
-import mockupFrame from "../images/mockup-frame.png"
+import posterImage from "../images/gospelexplosion.jpg"
 
-const Header = ({ siteTitle }) => (
+const Hero = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  )
+
+
+  return (
   <div
     style={{
       display: "flex",
@@ -17,47 +32,66 @@ const Header = ({ siteTitle }) => (
   >
     <div
       style={{
-        backgroundImage: `url(${headerImage})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(254, 253, 255, 0.62), rgba(80, 21, 06, 0.78)), url(${headerImage})`,
         position: "absolute",
         top: 0,
         zIndex: -5,
         height: "100vh",
         width: "100vw",
         opacity: 0.5,
+        backgroundPosition: "bottom",
+        backgroundSize: "cover"
       }}
     />
-    <h1 style={{ textAlign: "center" }}>Landing Page Starter</h1>
-    <p style={{ textAlign: "center", maxWidth: 440 }}>
-      This landing page looks great on all devices and is minimal in design. Add
-      what you want and deploy.
-    </p>
-    <Button>Get Early Access</Button>
-    <div style={{ margin: 60, width: `250px`, position: "relative" }}>
-      <div style={{ clipPath: "inset(2% 5% round 2% 5%)" }}>
-        <MockupContent />
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          width: "250px",
-          top: 0,
-        }}
-      >
-        <img
-          src={mockupFrame}
-          alt="outlines of shapes and confetti in the background "
-        />
-      </div>
-    </div>
-  </div>
-)
 
-Header.propTypes = {
+      <h1 style={{ textAlign: "center" }}>{data.site.siteMetadata.title}</h1>
+
+      <p style={{ textAlign: "center", maxWidth: 700 }}>
+        The Gospel Comedy Explosion is a touring roster of talented comedians spreading joyous noise in the form of laughter around the country. 
+      </p>
+      <p>
+      Ecclesiastes 3:4 proclaims “a time to laugh” The Gospel Comedy Explosion is happy to oblige.
+      </p>
+
+      <Button>See Upcoming Events</Button>
+
+      <div style={{ margin: 40, width: `350px`, position: "relative" }}>
+        <div style={{ clipPath: "inset(2% 5% round 2% 5%)" }}>
+          <MockupContent />
+        </div>
+
+        <div
+          style={{
+            position: "absolute",
+            width: "100%",
+            top: 0,
+          }}
+        >
+          <img
+            src={posterImage}
+            alt="outlines of shapes and confetti in the background "
+          />
+        </div>
+
+      </div>
+  </div>
+)}
+
+Hero.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+Hero.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
+export default Hero
