@@ -3,20 +3,20 @@ import React from "react"
 import { COLORS, BORDER_RADIUS, GRADIENT } from "../styles/constants"
 import "../styles/button.css"
 
-const Button = ({ children }) => (
-  <button
+const Button = ({ children, link }) => (
+  <a
+    className="button"
     style={{
-      padding: ".5rem 2.5rem",
-      color: COLORS.lightWhite,
-      fontWeight: 700,
+      color: `${COLORS.lightWhite} !important`,
       background: GRADIENT,
-      borderRadius: BORDER_RADIUS,
-      borderWidth: 0,
-      cursor: "pointer",
+      borderRadius: BORDER_RADIUS
     }}
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
   >
     {children}
-  </button>
+  </a>
 )
 
 export default Button

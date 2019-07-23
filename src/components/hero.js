@@ -53,7 +53,7 @@ const Hero = () => {
       Ecclesiastes 3:4 proclaims “a time to laugh” The Gospel Comedy Explosion is happy to oblige.
       </p>
 
-      <Button>See Upcoming Events</Button>
+      <Button link={'https://www.facebook.com/Paschal-Hildreth-Entertainment-253865181636743/'}>See Upcoming Events</Button>
 
       <div style={{ margin: 40, width: `350px`, position: "relative" }}>
         <div style={{ clipPath: "inset(2% 5% round 2% 5%)" }}>

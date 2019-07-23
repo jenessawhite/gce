@@ -9,7 +9,7 @@ const CallToAction = () => (
       title="Stay Updated"
       description="Follow us on Facebook to find our latest show"
     />
-    <Button>See Upcoming Events</Button>
+    <Button link={'https://www.facebook.com/Paschal-Hildreth-Entertainment-253865181636743/'}>See Upcoming Events</Button>
   </div>
 )
 
