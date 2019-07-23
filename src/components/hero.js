@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Button from "../components/button"
 import headerImage from "../images/donnie-rosie-taO2fC7sxDU-unsplash.jpg"
 import MockupContent from "./image"
-import posterImage from "../images/gospelexplosion.jpg"
+import posterImage from "../images/GCE_FLYER.png"
 
 const Hero = () => {
   const data = useStaticQuery(
