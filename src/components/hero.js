@@ -72,7 +72,6 @@ const Hero = () => {
             alt="outlines of shapes and confetti in the background "
           />
         </div>
-
       </div>
   </div>
 )}
@@ -85,13 +84,4 @@ Hero.defaultProps = {
   siteTitle: ``,
 }
 
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
 export default Hero
