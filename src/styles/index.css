@@ -1,0 +1,12 @@
+.button-wrapper {
+  display: inline-flex;
+  justify-content: space-evenly;
+  max-width: 800px;
+  padding: 1rem 1rem 2rem;
+  width: 100%
+}
+@media only screen and (max-width: 480px) {
+  .button-wrapper {
+    flex-direction: column;
+  }
+}

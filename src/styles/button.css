@@ -14,3 +14,8 @@ a.button:hover {
   color: rgb(176, 46, 12) !important;
 }
 
+@media only screen and (max-width: 480px) {
+  a.button {
+    margin: 1rem;
+  }
+}
